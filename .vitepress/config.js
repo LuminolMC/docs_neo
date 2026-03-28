@@ -2,6 +2,10 @@ export default {
   title: 'Documentation Site',
   description: 'A documentation site built with VitePress',
   appearance: 'auto',
+  ignoreDeadLinks: [
+    /\/lightingluminol/,
+    /\/lophine/
+  ],
   locales: {
     cn: {
       label: '简体中文',
