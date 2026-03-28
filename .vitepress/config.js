@@ -15,7 +15,8 @@ export default {
             text: '指南', 
             items: [
               { text: '介绍', link: '/cn/guide/' },
-              { text: 'Luminol', link: '/cn/guide/luminol/' }
+              { text: 'Luminol', link: '/cn/guide/luminol/' },
+              { text: 'Folia', link: '/cn/guide/folia/' }
             ]
           },
         ],
@@ -36,6 +37,15 @@ export default {
                 { text: '配置', link: '/cn/guide/luminol/configure' }
               ]
             }
+          ],
+          '/cn/guide/folia/': [
+            {
+              text: 'Folia',
+              items: [
+                { text: '介绍', link: '/cn/guide/folia/' },
+                { text: '配置', link: '/cn/guide/folia/configuration' }
+              ]
+            }
           ]
         }
       }
@@ -52,7 +62,8 @@ export default {
             text: 'Guide', 
             items: [
               { text: 'Introduction', link: '/en/guide/' },
-              { text: 'Luminol', link: '/en/guide/luminol/' }
+              { text: 'Luminol', link: '/en/guide/luminol/' },
+              { text: 'Folia', link: '/en/guide/folia/' }
             ]
           },
         ],
@@ -71,6 +82,15 @@ export default {
               items: [
                 { text: 'Introduction', link: '/en/guide/luminol/' },
                 { text: 'Configure', link: '/en/guide/luminol/configure' }
+              ]
+            }
+          ],
+          '/en/guide/folia/': [
+            {
+              text: 'Folia',
+              items: [
+                { text: 'Introduction', link: '/en/guide/folia/' },
+                { text: 'Configuration', link: '/en/guide/folia/configuration' }
               ]
             }
           ]
