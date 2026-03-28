@@ -1,6 +1,6 @@
 export default {
-  title: 'Documentation Site',
-  description: 'A documentation site built with VitePress',
+  title: 'LuminolMC docs',
+  description: 'The doucuments of LuminolMC',
   appearance: 'auto',
   ignoreDeadLinks: [
     /\/lightingluminol/,
