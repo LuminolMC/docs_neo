@@ -43,7 +43,8 @@ export default {
               text: 'Folia',
               items: [
                 { text: '介绍', link: '/cn/guide/folia/' },
-                { text: '配置', link: '/cn/guide/folia/configuration' }
+                { text: '配置', link: '/cn/guide/folia/configuration' },
+                { text: '线程数调优', link: '/cn/guide/folia/thread_count_tuning' }
               ]
             }
           ]
@@ -90,7 +91,8 @@ export default {
               text: 'Folia',
               items: [
                 { text: 'Introduction', link: '/en/guide/folia/' },
-                { text: 'Configuration', link: '/en/guide/folia/configuration' }
+                { text: 'Configuration', link: '/en/guide/folia/configuration' },
+                { text: 'Thread Count Tuning', link: '/en/guide/folia/thread_count_tuning' }
               ]
             }
           ]
