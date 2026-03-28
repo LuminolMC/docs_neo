@@ -1,6 +1,7 @@
 export default {
   title: 'Documentation Site',
   description: 'A documentation site built with VitePress',
+  appearance: 'auto',
   locales: {
     cn: {
       label: '简体中文',

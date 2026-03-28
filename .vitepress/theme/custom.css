@@ -1,0 +1,123 @@
+body {
+  background-image: url('../../resources/global_background.jpg');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+}
+
+/* 主背景透明 */
+:root {
+  --vp-c-bg: transparent;
+  --vp-c-bg-soft: rgba(255, 255, 255, 0.08);
+  --vp-c-bg-mute: rgba(255, 255, 255, 0.08);
+}
+
+/* 亮色模式变量覆盖：保证文字可读 */
+html:not(.dark) {
+  --vp-c-text-1: #1a1a1a;
+  --vp-c-text-2: #3a3a3a;
+  --vp-c-text-3: #555;
+  --vp-c-bg-soft: rgba(0, 0, 0, 0.05);
+  --vp-c-bg-mute: rgba(0, 0, 0, 0.05);
+}
+
+/* 导航栏 — 固定图层防止边缘闪烁 */
+.VPNav {
+  background: rgba(0, 0, 0, 0.4) !important;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  transform: translateZ(0);
+  isolation: isolate;
+}
+
+.VPNavBar {
+  background: transparent !important;
+}
+
+/* 亮色模式导航栏 */
+html:not(.dark) .VPNav {
+  background: rgba(255, 255, 255, 0.45) !important;
+}
+
+/* 侧边栏 */
+.VPSidebar {
+  background: rgba(0, 0, 0, 0.4) !important;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  transform: translateZ(0);
+  isolation: isolate;
+}
+
+html:not(.dark) .VPSidebar {
+  background: rgba(255, 255, 255, 0.45) !important;
+}
+
+/* 本地导航（移动端） */
+.VPLocalNav {
+  background: rgba(0, 0, 0, 0.4) !important;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  transform: translateZ(0);
+  isolation: isolate;
+}
+
+html:not(.dark) .VPLocalNav {
+  background: rgba(255, 255, 255, 0.45) !important;
+}
+
+/* 内容区域透明 */
+.VPContent {
+  background: transparent !important;
+}
+
+.VPDoc {
+  background: transparent !important;
+}
+
+/* Markdown 内容区毛玻璃卡片 — 深色模式 */
+.VPDoc .container {
+  background: rgba(15, 15, 25, 0.6);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border-radius: 16px;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+  padding: 32px !important;
+  margin: 24px auto !important;
+  /* 固定合成层，消除边缘闪烁 */
+  transform: translateZ(0);
+  isolation: isolate;
+  overflow: hidden;
+}
+
+/* Markdown 内容区 — 亮色模式 */
+html:not(.dark) .VPDoc .container {
+  background: rgba(255, 255, 255, 0.60);
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.15);
+}
+
+/* 代码块 — 深色 */
+.vp-code-group,
+div[class*='language-'] {
+  background: rgba(0, 0, 0, 0.5) !important;
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+/* 代码块 — 亮色模式 */
+html:not(.dark) .vp-code-group,
+html:not(.dark) div[class*='language-'] {
+  background: rgba(0, 0, 0, 0.08) !important;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+/* 行内代码 */
+:not(pre) > code {
+  background: rgba(255, 255, 255, 0.12) !important;
+  border-radius: 4px;
+}
+
+html:not(.dark) :not(pre) > code {
+  background: rgba(0, 0, 0, 0.07) !important;
+}
