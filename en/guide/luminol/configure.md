@@ -107,6 +107,11 @@ The config file should be in TOML format and here is the config with its key com
 	[fixes.use_vanilla_random_source]
 		#Related with RNG cracks
 		enable_for_player_entity = false
+		
+	[function.item_multitask]
+		#Prevent the server from interrupting the state of items
+		#during block interactions or hotbar slot changes.
+		enabled = false
 
 	[function.regionbar]
 		format = "<gray>Util<yellow>:</yellow> <util> Chunks<yellow>:</yellow> <green><chunks></green> Players<yellow>:</yellow> <green><players></green> Entities<yellow>:</yellow> <green><entities></green>"
@@ -142,10 +147,6 @@ The config file should be in TOML format and here is the config with its key com
 		#MIXED
 		behavior_mode = "VANILLA21"
 
-	[function.item_multitask]
-		#Prevent the server from interrupting the state of items
-		#during block interactions or hotbar slot changes.
-		enabled = false
 
 	[function.membar]
 		format = "<gray>Memory usage <yellow>:</yellow> <used>MB<yellow>/</yellow><available>MB"

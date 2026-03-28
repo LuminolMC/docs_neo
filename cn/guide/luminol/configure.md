@@ -106,6 +106,10 @@
 		#与 RNG 破解相关
 		enable_for_player_entity = false
 
+	[fixes.item_multitask]
+		#防止服务器在方块交互或物品栏槽位更改期间中断物品的状态。
+		enabled = false
+
 	[function.regionbar]
 		format = "<gray>Util<yellow>:</yellow> <util> Chunks<yellow>:</yellow> <green><chunks></green> Players<yellow>:</yellow> <green><players></green> Entities<yellow>:</yellow> <green><entities></green>"
 		enabled = false
@@ -139,10 +143,6 @@
 		#VANILLA21
 		#MIXED
 		behavior_mode = "VANILLA21"
-
-	[function.item_multitask]
-		#防止服务器在方块交互或物品栏槽位更改期间中断物品的状态。
-		enabled = false
 
 	[function.membar]
 		format = "<gray>Memory usage <yellow>:</yellow> <used>MB<yellow>/</yellow><available>MB"
