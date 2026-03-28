@@ -10,7 +10,7 @@ export default {
     cn: {
       label: '简体中文',
       lang: 'zh-CN',
-      title: 'LuminoLMC 文档站点',
+      title: 'LuminolMC 文档站点',
       description: 'LuminolMC的文档站点',
       themeConfig: {
         nav: [
