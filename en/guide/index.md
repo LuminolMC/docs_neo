@@ -14,5 +14,3 @@ We totally have 3 projects available and 2 of them are in active maintenance.
 
 Check here to browze the guides for them:
 - [Luminol](./luminol/)
-- [LightingLuminol](./lightingluminol/)
-- [Lophine](./lophine/)
