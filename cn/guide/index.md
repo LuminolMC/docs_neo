@@ -14,5 +14,3 @@
 
 请在此处浏览它们的指南：
 - [Luminol](./luminol/)
-- [LightingLuminol](./lightingluminol/)
-- [Lophine](./lophine/)
