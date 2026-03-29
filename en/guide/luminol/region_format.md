@@ -23,6 +23,6 @@ The linear has 3 speific configurations in luminol config: the "linear_compressi
 
 Given that linear puts its decompressed data, we designed a new format buffered linear, which puts its decompressed data into a independent swap file in order to reduce memory usage
 
-It has 3 speific configurations "blinear_io_thread_count", "blinear_io_flush_delay_ms" and "linear_compression_level", differ from the linear, buffered linear uses a thread pool (pool size is decided by "blinear_io_thread_count") instead of creating thread for each opened region file and it uses write time out mechanism (only do sync after there have no any written opeartions for n(n is represent "blinear_io_flush_delay_ms") ms), which makes it a bit costless than linear
+It has 3 speific configurations "blinear_io_thread_count", "blinear_io_flush_delay_ms" and "linear_compression_level", differ from the linear, buffered linear uses a thread pool (pool size is decided by "blinear_io_thread_count") instead of creating thread for each opened region file and it uses write time out mechanism (only do sync after there have no any written operations for n(n is represent "blinear_io_flush_delay_ms") ms), which makes it a bit cheaper than linear
 
 Additionally, buffered linear supports directly loading the linear v1 format as you could just migrate linear v1 to it by renaming the file suffix from ".linear" to ".b_linear"
