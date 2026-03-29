@@ -1,5 +1,5 @@
 {
-  "name": "vitepress-docs",
+  "name": "luminol-docs",
   "private": true,
   "type": "module",
   "scripts": {

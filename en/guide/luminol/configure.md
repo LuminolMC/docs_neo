@@ -1,7 +1,7 @@
 # Configure
 We have totally 2 extra configuration files:
   - luminol_config/luminol_global_config.toml (The configuration file of luminol)
-  - luminol_config/kaiiju_entity_limits.yml (The configuration file of kaiiju's entity limiter, see [Kaiiju Entity Limiter](#kaiiju-entity-limiter))
+  - luminol_config/kaiiju_entity_limits.yml (The configuration file of kaiiju's entity limiter, see [Kaiiju Entity Limiter](#kaiiju-entity-limits))
 
 # Luminol Global Config
 This file is the main configuration file of luminol.

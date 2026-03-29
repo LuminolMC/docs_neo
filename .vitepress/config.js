@@ -6,6 +6,15 @@ export default {
     /\/lightingluminol/,
     /\/lophine/
   ],
+  themeConfig: {
+    socialLinks: [
+      { icon: 'github', link: 'https://github.com/LuminolMC' }
+    ],
+    footer: {
+      message: 'Released under the MIT License.',
+      copyright: 'Copyright © 2026-present LuminolMC'
+    }
+  },
   locales: {
     cn: {
       label: '简体中文',
