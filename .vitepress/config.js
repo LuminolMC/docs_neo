@@ -47,7 +47,8 @@ export default {
               text: 'Luminol',
               items: [
                 { text: '介绍', link: '/cn/guide/luminol/' },
-                { text: '配置', link: '/cn/guide/luminol/configure' }
+                { text: '配置', link: '/cn/guide/luminol/configure' },
+                { text: 'Region格式', link: '/cn/guide/luminol/region_format' }
               ]
             }
           ],
@@ -95,7 +96,8 @@ export default {
               text: 'Luminol',
               items: [
                 { text: 'Introduction', link: '/en/guide/luminol/' },
-                { text: 'Configure', link: '/en/guide/luminol/configure' }
+                { text: 'Configure', link: '/en/guide/luminol/configure' },
+                { text: 'Region Format', link: '/en/guide/luminol/region_format' }
               ]
             }
           ],
