@@ -25,4 +25,4 @@ Linear 在 Luminol 配置中有 3 个专属配置项：`linear_compression_level
 
 Buffered Linear 有 3 个专属配置项：`blinear_io_thread_count`、`blinear_io_flush_delay_ms` 和 `linear_compression_level`。与 Linear 不同，Buffered Linear 使用线程池（池大小由 `blinear_io_thread_count` 决定）而非为每个打开的 Region 文件单独创建线程，并采用写入超时机制（仅在连续 n 毫秒内无任何写入操作后才执行同步，n 由 `blinear_io_flush_delay_ms` 指定），因此开销略低于 Linear。
 
-此外，Buffered Linear 支持直接加载 Linear V1 格式，你只需将文件后缀从 `.linear` 重命名为 `.b_linear` 即可完成迁移。
+此外，Buffered Linear 支持直接加载 Linear V1 及 V2 格式，你只需将文件后缀从 `.linear` 重命名为 `.b_linear` 即可完成迁移。
