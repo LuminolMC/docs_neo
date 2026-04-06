@@ -1,6 +1,11 @@
 <script setup>
 import DefaultTheme from 'vitepress/theme'
+import { onMounted } from 'vue'
 const { Layout } = DefaultTheme
+
+onMounted(() => {
+  document.body.style.backgroundImage = `url('https://www.loliapi.com/acg/pc/')`
+})
 </script>
 
 <template>
@@ -27,7 +32,7 @@ const { Layout } = DefaultTheme
 .luminol-blob {
   position: absolute;
   border-radius: 50%;
-  filter: blur(90px);
+  filter: blur(85.5px);
 }
 
 .luminol-blob-1 {

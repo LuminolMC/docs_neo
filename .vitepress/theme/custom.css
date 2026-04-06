@@ -22,7 +22,6 @@ html:not(.dark) {
 
 /* ===== Background ===== */
 body {
-  background-image: url('../../resources/global_background.jpg');
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
@@ -49,8 +48,8 @@ html:not(.dark) {
 /* ===== Navigation ===== */
 .VPNav {
   background: rgba(8, 12, 26, 0.68) !important;
-  backdrop-filter: blur(24px) saturate(180%);
-  -webkit-backdrop-filter: blur(24px) saturate(180%);
+  backdrop-filter: blur(22.8px) saturate(180%);
+  -webkit-backdrop-filter: blur(22.8px) saturate(180%);
   border-bottom: 1px solid rgba(56, 189, 248, 0.12);
   transform: translateZ(0);
   isolation: isolate;
@@ -119,8 +118,8 @@ html:not(.dark) .VPNavBarMenuLink:hover {
 /* ===== Sidebar ===== */
 .VPSidebar {
   background: rgba(8, 12, 26, 0.58) !important;
-  backdrop-filter: blur(20px) saturate(160%);
-  -webkit-backdrop-filter: blur(20px) saturate(160%);
+  backdrop-filter: blur(19px) saturate(160%);
+  -webkit-backdrop-filter: blur(19px) saturate(160%);
   border-right: 1px solid rgba(56, 189, 248, 0.08);
   transform: translateZ(0);
   isolation: isolate;
@@ -181,8 +180,8 @@ html:not(.dark) .VPSidebarItem.is-active > .item .link {
 /* ===== Local Nav (mobile) ===== */
 .VPLocalNav {
   background: rgba(8, 12, 26, 0.6) !important;
-  backdrop-filter: blur(20px);
-  -webkit-backdrop-filter: blur(20px);
+  backdrop-filter: blur(19px);
+  -webkit-backdrop-filter: blur(19px);
   border-bottom: 1px solid rgba(56, 189, 248, 0.08);
   transform: translateZ(0);
   isolation: isolate;
@@ -199,8 +198,8 @@ html:not(.dark) .VPLocalNav {
 /* Main content card */
 .VPDoc .container {
   background: rgba(8, 12, 26, 0.65);
-  backdrop-filter: blur(17px) saturate(150%);
-  -webkit-backdrop-filter: blur(17px) saturate(150%);
+  backdrop-filter: blur(16.15px) saturate(150%);
+  -webkit-backdrop-filter: blur(16.15px) saturate(150%);
   border-radius: 18px;
   border: 1px solid rgba(56, 189, 248, 0.1);
   box-shadow: 0 16px 48px rgba(0, 0, 0, 0.45);
@@ -453,7 +452,7 @@ html:not(.dark) .VPHero .tagline {
 .VPButton.medium.alt {
   background: rgba(255, 255, 255, 0.07) !important;
   border: 1px solid rgba(56, 189, 248, 0.3) !important;
-  backdrop-filter: blur(8px);
+  backdrop-filter: blur(7.6px);
 }
 
 .VPButton.medium.alt:hover {
@@ -470,8 +469,8 @@ html:not(.dark) .VPButton.medium.alt {
 /* ===== Feature Cards ===== */
 .VPFeature {
   background: rgba(8, 12, 26, 0.58) !important;
-  backdrop-filter: blur(16px) !important;
-  -webkit-backdrop-filter: blur(16px) !important;
+  backdrop-filter: blur(15.2px) !important;
+  -webkit-backdrop-filter: blur(15.2px) !important;
   border: 1px solid rgba(56, 189, 248, 0.08) !important;
   border-radius: 16px !important;
   transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease !important;
@@ -552,7 +551,7 @@ html:not(.dark) .VPFeature:hover {
 /* ===== Footer ===== */
 .VPFooter {
   background: rgba(8, 12, 26, 0.6) !important;
-  backdrop-filter: blur(20px);
+  backdrop-filter: blur(19px);
   border-top: 1px solid rgba(56, 189, 248, 0.08);
   font-family: 'Outfit', sans-serif;
 }
@@ -638,7 +637,7 @@ div[class*='language-'] > span.lang {
   border-radius: 12px !important;
   border: 1px solid rgba(56, 189, 248, 0.12) !important;
   background: rgba(8, 12, 26, 0.5) !important;
-  backdrop-filter: blur(10px);
+  backdrop-filter: blur(9.5px);
   transition: border-color 0.2s ease, transform 0.2s ease !important;
 }
 
