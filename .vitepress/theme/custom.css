@@ -46,23 +46,25 @@ html:not(.dark) {
 ::-webkit-scrollbar-thumb { background: rgba(56, 189, 248, 0.35); border-radius: 99px; }
 ::-webkit-scrollbar-thumb:hover { background: rgba(56, 189, 248, 0.65); }
 
-/* ===== Navigation — floating capsule ===== */
+/* ===== Navigation ===== */
 .VPNav {
-  background: transparent !important;
-  border-bottom: none !important;
-  padding: 12px 16px 0 !important;
-  transform: translateZ(0);
-  isolation: isolate;
-}
-
-.VPNavBar {
   background: rgba(8, 12, 26, 0.68) !important;
   backdrop-filter: blur(24px) saturate(180%);
   -webkit-backdrop-filter: blur(24px) saturate(180%);
-  border: 1px solid rgba(56, 189, 248, 0.12) !important;
-  border-radius: 16px !important;
-  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.3), inset 0 1px 0 rgba(255,255,255,0.06);
-  padding: 0 8px !important;
+  border-bottom: 1px solid rgba(56, 189, 248, 0.12);
+  transform: translateZ(0);
+  isolation: isolate;
+  animation: nav-pulse 5s ease-in-out infinite;
+}
+
+@keyframes nav-pulse {
+  0%, 100% { box-shadow: none; }
+  50%       { box-shadow: 0 0 28px rgba(56, 189, 248, 0.1); }
+}
+
+.VPNavBar {
+  background: transparent !important;
+  border-bottom: none !important;
 }
 
 /* Nav site title */
@@ -96,10 +98,9 @@ html:not(.dark) {
   -webkit-text-fill-color: var(--vp-c-brand-1) !important;
 }
 
-html:not(.dark) .VPNavBar {
-  background: rgba(255, 255, 255, 0.82) !important;
-  border: 1px solid rgba(2, 132, 199, 0.14) !important;
-  box-shadow: 0 4px 24px rgba(15, 23, 42, 0.08), inset 0 1px 0 rgba(255,255,255,0.9);
+html:not(.dark) .VPNav {
+  background: rgba(248, 252, 255, 0.75) !important;
+  border-bottom: 1px solid rgba(2, 132, 199, 0.12);
 }
 
 html:not(.dark) .VPNavBarTitle .title {
@@ -208,6 +209,19 @@ html:not(.dark) .VPLocalNav {
   transform: translateZ(0);
   isolation: isolate;
   transition: box-shadow 0.35s ease;
+  position: relative;
+}
+
+/* Top accent line */
+.VPDoc .container::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 10%; right: 10%;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, #38bdf8 40%, #818cf8 60%, transparent);
+  border-radius: 0 0 2px 2px;
+  pointer-events: none;
+  opacity: 0.7;
 }
 
 .VPDoc .container:hover {
@@ -461,6 +475,25 @@ html:not(.dark) .VPButton.medium.alt {
   border: 1px solid rgba(56, 189, 248, 0.08) !important;
   border-radius: 16px !important;
   transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease !important;
+  position: relative !important;
+  overflow: hidden !important;
+}
+
+/* Shine sweep on hover */
+.VPFeature::after {
+  content: '';
+  position: absolute;
+  top: 0; left: -100%;
+  width: 60%;
+  height: 100%;
+  background: linear-gradient(105deg, transparent, rgba(255,255,255,0.07), transparent);
+  transform: skewX(-15deg);
+  transition: left 0.55s ease;
+  pointer-events: none;
+}
+
+.VPFeature:hover::after {
+  left: 160%;
 }
 
 .VPFeature:hover {
@@ -493,6 +526,28 @@ html:not(.dark) .VPFeature:hover {
 
 /* ===== Home Layout ===== */
 .VPHome, .VPHomeHero { background: transparent !important; }
+
+/* Hero dot-grid overlay */
+.VPHero {
+  position: relative;
+}
+
+.VPHero::before {
+  content: '';
+  position: absolute;
+  inset: -40px;
+  background-image: radial-gradient(circle, rgba(56, 189, 248, 0.18) 1px, transparent 1px);
+  background-size: 28px 28px;
+  pointer-events: none;
+  mask-image: radial-gradient(ellipse 80% 60% at 50% 50%, black 0%, transparent 100%);
+  -webkit-mask-image: radial-gradient(ellipse 80% 60% at 50% 50%, black 0%, transparent 100%);
+  z-index: 0;
+}
+
+.VPHero .container {
+  position: relative;
+  z-index: 1;
+}
 
 /* ===== Footer ===== */
 .VPFooter {
@@ -537,6 +592,27 @@ html:not(.dark) .VPFooter {
 .vp-doc h2:hover .header-anchor,
 .vp-doc h3:hover .header-anchor {
   opacity: 0.6;
+}
+
+/* ===== Strong / Bold ===== */
+.vp-doc strong {
+  color: #7dd8ff;
+  font-weight: 700;
+}
+
+html:not(.dark) .vp-doc strong {
+  color: #0284c7;
+}
+
+/* ===== Code block language badge ===== */
+div[class*='language-'] > span.lang {
+  font-family: 'Outfit', sans-serif !important;
+  font-size: 0.7rem !important;
+  font-weight: 700 !important;
+  letter-spacing: 0.08em !important;
+  text-transform: uppercase !important;
+  color: var(--vp-c-brand-1) !important;
+  opacity: 0.8;
 }
 
 /* ===== Divider ===== */
