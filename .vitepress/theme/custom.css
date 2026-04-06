@@ -46,19 +46,23 @@ html:not(.dark) {
 ::-webkit-scrollbar-thumb { background: rgba(56, 189, 248, 0.35); border-radius: 99px; }
 ::-webkit-scrollbar-thumb:hover { background: rgba(56, 189, 248, 0.65); }
 
-/* ===== Navigation ===== */
+/* ===== Navigation — floating capsule ===== */
 .VPNav {
-  background: rgba(8, 12, 26, 0.6) !important;
-  backdrop-filter: blur(20px) saturate(180%);
-  -webkit-backdrop-filter: blur(20px) saturate(180%);
-  border-bottom: 1px solid rgba(56, 189, 248, 0.1);
+  background: transparent !important;
+  border-bottom: none !important;
+  padding: 12px 16px 0 !important;
   transform: translateZ(0);
   isolation: isolate;
 }
 
 .VPNavBar {
-  background: transparent !important;
-  border-bottom: none !important;
+  background: rgba(8, 12, 26, 0.68) !important;
+  backdrop-filter: blur(24px) saturate(180%);
+  -webkit-backdrop-filter: blur(24px) saturate(180%);
+  border: 1px solid rgba(56, 189, 248, 0.12) !important;
+  border-radius: 16px !important;
+  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.3), inset 0 1px 0 rgba(255,255,255,0.06);
+  padding: 0 8px !important;
 }
 
 /* Nav site title */
@@ -71,7 +75,7 @@ html:not(.dark) {
   background-clip: text;
 }
 
-/* Nav menu links — color only, no padding change */
+/* Nav menu links */
 .VPNavBarMenuLink {
   font-weight: 500;
   letter-spacing: 0.01em;
@@ -92,9 +96,10 @@ html:not(.dark) {
   -webkit-text-fill-color: var(--vp-c-brand-1) !important;
 }
 
-html:not(.dark) .VPNav {
-  background: rgba(248, 252, 255, 0.75) !important;
-  border-bottom: 1px solid rgba(2, 132, 199, 0.12);
+html:not(.dark) .VPNavBar {
+  background: rgba(255, 255, 255, 0.82) !important;
+  border: 1px solid rgba(2, 132, 199, 0.14) !important;
+  box-shadow: 0 4px 24px rgba(15, 23, 42, 0.08), inset 0 1px 0 rgba(255,255,255,0.9);
 }
 
 html:not(.dark) .VPNavBarTitle .title {
@@ -514,6 +519,40 @@ html:not(.dark) .VPFooter {
 }
 
 .VPDocAsideOutline .outline-link.active {
+  color: var(--vp-c-brand-1);
+  font-weight: 600;
+}
+
+/* ===== Heading anchor link ===== */
+.vp-doc h1 .header-anchor,
+.vp-doc h2 .header-anchor,
+.vp-doc h3 .header-anchor {
+  opacity: 0;
+  color: var(--vp-c-brand-1) !important;
+  -webkit-text-fill-color: var(--vp-c-brand-1) !important;
+  transition: opacity 0.2s ease;
+}
+
+.vp-doc h1:hover .header-anchor,
+.vp-doc h2:hover .header-anchor,
+.vp-doc h3:hover .header-anchor {
+  opacity: 0.6;
+}
+
+/* ===== Divider ===== */
+.vp-doc hr {
+  border: none;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(56, 189, 248, 0.3), transparent);
+  margin: 32px 0;
+}
+
+/* ===== List markers ===== */
+.vp-doc ul li::marker {
+  color: var(--vp-c-brand-1);
+}
+
+.vp-doc ol li::marker {
   color: var(--vp-c-brand-1);
   font-weight: 600;
 }
